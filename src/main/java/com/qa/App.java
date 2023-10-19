@@ -11,7 +11,9 @@ public class App
     public static void main( String[] args ) {
 
 
-    moreLoops();
+//    exercise1();
+        App app = new App();
+        app.exercise2();
     }
 
     private void test() {
@@ -78,7 +80,7 @@ public class App
         }
     }
 
-    public static void moreLoops() {
+    public static void exercise1() {
         int i = 0;
         while (i < 10) {
             System.out.println("i = " + i);
@@ -119,5 +121,24 @@ public class App
         }
         System.out.println(sum);
     }
+
+    private void exercise2() {
+        int x = 10;
+        while (x > 0) {
+            System.out.print(x-- + " ");
+        }
+        System.out.println("We have lift off");
+
+        x = 10;
+        while (x > 0) {
+            System.out.println("x is " + x);
+            x--;
+        }
+
+        int sum = 0;
+        for (int i = 0; i < 10; sum += i++) {
+            System.out.println("Sum is " + sum);
+        }
+}
 }
 
