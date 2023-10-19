@@ -9,6 +9,12 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ) {
+
+
+    moreLoops();
+    }
+
+    private void test() {
 //        String firstName, lastName;
 //        firstName = "David";
 //        lastName = "McBride";
@@ -31,22 +37,87 @@ public class App
         System.out.println("Please enter your full name");
         String fullName = scanner.nextLine();
         String[] names = fullName.split(" ");
-
         String outName = "Your full name is ";
 
-        for (int i = 0; i < names.length; i++) {
-            outName += names[i] + " ";
+        for (String name : names) {
+            outName += name + " ";
         }
 
-
+        System.out.println(outName.trim());
 
 
 //        System.out.println("Your full name is " + names[0] + " " + names[names.length-1]);
-        System.out.println(outName.trim());
+
         System.out.println("Please enter a number");
         int num1 = scanner.nextInt();
         System.out.println("Please enter a second number");
         int num2 = scanner.nextInt();
         System.out.println("The sum of the two numbers entered is " + (num1 + num2));
     }
+
+    public static void loops() {
+        boolean isRaining = true;
+        boolean armsHurt = true;
+
+        while (isRaining) {
+            System.out.println("Hold up umbrella");
+
+            if (armsHurt) {
+                System.out.println("My arms are too tired, I'd rather get rained on");
+                break;
+            }
+        }
+
+        int i = 0;
+
+        while (i < 10) {
+
+            System.out.println("1 = " + i);
+
+
+        }
+    }
+
+    public static void moreLoops() {
+        int i = 0;
+        while (i < 10) {
+            System.out.println("i = " + i);
+            i++;
+        }
+
+        System.out.println("=============================");
+
+        i = 0;
+        do {
+            System.out.println("i = " + i);
+            i++;
+        } while (i < 10);
+
+//          i and j example
+        for (int k = 0, l = 10; k < l; k++, l--) {
+            System.out.println("k = " + k + ", " + "l = " + l);
+        }
+
+        System.out.println("=============================");
+
+        int k = 0, l = 10;
+        while (k<l) {
+            System.out.println("k = " + k + ", " + "l = " + l);
+            k++;
+            l--;
+        }
+
+//        sum example
+        int sum = 0;
+        for (int m = 0; m < 10; sum += m, m++) {}
+        System.out.println(sum);
+
+        sum = 0;
+        while (i < 10) {
+            sum += i;
+            i++;
+        }
+        System.out.println(sum);
+    }
 }
+
